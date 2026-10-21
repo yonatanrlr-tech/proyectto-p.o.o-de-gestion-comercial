@@ -1,0 +1,32 @@
+# FORMATO: ID|NOMBRE|EMAIL|TELEFONO|DIRECCION|CONTRASENA
+CLI-101|ari|ariquispe101@gmail.com|900000101|jr puno 101|ari2026
+CLI-102|aron|aronavila102@gmail.com|900000102|av ejercito 102|aron2026
+CLI-103|lourdes|lourdescabana103@gmail.com|900000103|jr lima 103|lourdes2026
+CLI-104|nayer|nayercayo104@gmail.com|900000104|av titicaca 104|nayer2026
+CLI-105|guilmar|guilmarccoa105@gmail.com|900000105|jr arequipa 105|guilmar2026
+CLI-106|cristian|cristianchecalla106@gmail.com|900000106|av el sol 106|cristian2026
+CLI-107|jhunior|jhuniorchura107@gmail.com|900000107|jr tacna 107|jhunior2026
+CLI-108|cristopher|cristophercoila108@gmail.com|900000108|av floral 108|cristopher2026
+CLI-109|anthony|anthonyhuacasi109@gmail.com|900000109|jr libertad 109|anthony2026
+CLI-110|freddy|freddyhuallpa110@gmail.com|900000110|av la cultura 110|freddy2026
+CLI-111|juan|juanhuanca111@gmail.com|900000111|jr progreso 111|juan2026
+CLI-112|jean|jeanincacari112@gmail.com|900000112|av los incas 112|jean2026
+CLI-113|vladimir|vladimirticona113@gmail.com|900000113|jr union 113|vladimir2026
+CLI-114|arnold|arnoldmamani114@gmail.com|900000114|av primavera 114|arnold2026
+CLI-115|kevin|kevinmamani115@gmail.com|900000115|jr independencia 115|kevin2026
+CLI-116|joel|joelmamani116@gmail.com|900000116|av los andes 116|joel2026
+CLI-117|sebastian|sebastianmamani117@gmail.com|900000117|jr san martin 117|sebastian2026
+CLI-118|zunny|zunnymamani118@gmail.com|900000118|av universidad 118|zunny2026
+CLI-119|lenin|leninmamani119@gmail.com|900000119|jr puno 119|lenin2026
+CLI-120|georgina|georginamartinez120@gmail.com|900000120|av venezuela 120|georgina2026
+CLI-121|joe|joemendoza121@gmail.com|900000121|jr bolivar 121|joe2026
+CLI-122|franklin|franklinquillimamami122@gmail.com|900000122|av costanera 122|franklin2026
+CLI-123|johao|johaoquispe123@gmail.com|900000123|jr puno 123|johao2026
+CLI-124|deyvit|deyvitrafael124@gmail.com|900000124|av san roman 124|deyvit2026
+CLI-125|jose|joseromero125@gmail.com|900000125|jr puno 125|jose2026
+CLI-126|blaise|blaisesucari126@gmail.com|900000126|av libertad 126|blaise2026
+CLI-127|jean|jeansucari127@gmail.com|900000127|jr los pinos 127|jean2026
+CLI-128|jafet|jafettintaya128@gmail.com|900000128|av primavera 128|jafet2026
+CLI-129|paulo|paulov elarde129@gmail.com|900000129|jr comercio 129|paulo2026
+CLI-130|prueba|xd|xd|xd|xd
+CLI-131|xd|xd|xd|xd|xd

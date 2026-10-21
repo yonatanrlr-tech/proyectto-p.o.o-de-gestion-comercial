@@ -1,0 +1,62 @@
+
+# FORMATO: CODIGO|NOMBRE|MARCA|MODELO|VARIANTE|PRECIO|STOCK
+TEC-001|procesador ryzen 5|amd|ryzen 5 5600|6 nucleos|589.90|12
+TEC-002|procesador core i5|intel|core i5 12400f|12 generacion|699.90|8
+TEC-003|procesador ryzen 7|amd|ryzen 7 5700x|8 nucleos|899.90|7
+TEC-004|placa madre gaming|asus|prime b550m-a|am4 ddr4|429.90|10
+TEC-005|placa madre gaming|msi|b550m pro-vdh|am4 ddr4|459.90|6
+TEC-006|placa madre gaming|gigabyte|b760m ds3h|intel ddr4|489.90|9
+TEC-007|memoria ram|kingston|fury beast|8gb ddr4 3200mhz|89.90|20
+TEC-008|memoria ram|kingston|fury beast|16gb ddr4 3200mhz|159.90|15
+TEC-009|memoria ram|corsair|vengeance|32gb ddr4 3600mhz|329.90|11
+TEC-010|memoria ram|kingston|fury beast|16gb ddr5 5600mhz|219.90|8
+TEC-011|tarjeta grafica|nvidia|geforce rtx 3060|12gb gddr6|1299.90|5
+TEC-012|tarjeta grafica|nvidia|geforce rtx 4060|8gb gddr6|1499.90|7
+TEC-013|tarjeta grafica|amd|radeon rx 6600|8gb gddr6|999.90|6
+TEC-014|tarjeta grafica|nvidia|geforce rtx 4070|12gb gddr6|2799.90|3
+TEC-015|fuente de poder|corsair|cv550|550w 80 plus bronze|229.90|12
+TEC-016|fuente de poder|evga|600 w1|600w|249.90|9
+TEC-017|fuente de poder|cooler master|mwe 650|650w 80 plus bronze|319.90|7
+TEC-018|disco solido ssd|kingston|a400|480gb sata|139.90|14
+TEC-019|disco solido ssd|kingston|nv2|1tb m.2 nvme|299.90|10
+TEC-020|disco solido ssd|samsung|970 evo plus|1tb nvme|399.90|6
+TEC-021|disco duro|seagate|barracuda|1tb sata|199.90|13
+TEC-022|disco duro|western digital|blue|2tb sata|299.90|8
+TEC-023|case gamer|thermaltake|versa h18|micro atx negro|199.90|7
+TEC-024|case gamer|corsair|4000d airflow|mid tower negro|399.90|5
+TEC-025|case gamer|cooler master|td500 mesh|rgb blanco|459.90|4
+TEC-026|refrigeracion cpu|deepcool|gammaxx 400|ventilador 120mm|119.90|10
+TEC-027|refrigeracion liquida|cooler master|ml240l|240mm argb|399.90|4
+TEC-028|monitor gaming|lg|ultragear 24gn60r|24 pulgadas 144hz|699.90|6
+TEC-029|monitor gaming|samsung|odyssey g3|24 pulgadas 144hz|749.90|5
+TEC-030|monitor|asus|va27ehe|27 pulgadas full hd|599.90|8
+TEC-031|teclado mecanico|redragon|kumara k552|rgb switches blue|149.90|12
+TEC-032|teclado mecanico|logitech|g413 se|switches tactiles|299.90|5
+TEC-033|teclado gamer|hyperx|alloy core|membrana rgb|169.90|9
+TEC-034|mouse gamer|logitech|g203 lightsync|8000 dpi rgb|99.90|15
+TEC-035|mouse gamer|razer|deathadder essential|6400 dpi negro|119.90|11
+TEC-036|mouse gamer|redragon|cobra m711|10000 dpi rgb|89.90|14
+TEC-037|audifonos gamer|hyperx|cloud stinger 2|negro con microfono|219.90|7
+TEC-038|audifonos gamer|logitech|g435|inalambrico azul|329.90|5
+TEC-039|audifonos gamer|razer|blackshark v2 x|negro 3.5mm|249.90|6
+TEC-040|microfono usb|fifine|k669b|condensador negro|189.90|8
+TEC-041|webcam|logitech|c920 hd pro|1080p full hd|299.90|7
+TEC-042|parlantes pc|logitech|z120|estereo usb blanco|59.90|13
+TEC-043|adaptador wifi|tp-link|archer t3u|usb ac1300|99.90|10
+TEC-044|adaptador bluetooth|tp-link|ub500|bluetooth 5.0 usb|49.90|16
+TEC-045|router wifi|tp-link|archer ax23|wifi 6 doble banda|249.90|6
+TEC-046|switch de red|tp-link|tl-sg105|5 puertos gigabit|99.90|9
+TEC-047|cable de red|ugreen|cat6 ethernet|5 metros|29.90|20
+TEC-048|adaptador usb|ugreen|usb c hub|5 en 1|119.90|8
+TEC-049|memoria usb|kingston|datatraveler exodia|64gb usb 3.2|29.90|18
+TEC-050|memoria usb|sandisk|ultra flair|128gb usb 3.0|49.90|12
+TEC-051|tarjeta de memoria|sandisk|ultra microsd|128gb clase 10|59.90|11
+TEC-052|lector de tarjetas|ugreen|usb 3.0 reader|sd y microsd|39.90|9
+TEC-053|ups|forza|nt-1011|1000va 500w|279.90|5
+TEC-054|estabilizador|forza|fvr-1202|1200va|99.90|8
+TEC-055|impresora multifuncional|epson|ecotank l3250|wifi tinta continua|799.90|4
+TEC-056|impresora laser|hp|laserjet m111w|monocromatica wifi|549.90|3
+TEC-057|laptop|lenovo|ideapad 3|ryzen 5 8gb 512gb ssd|2299.90|4
+TEC-058|laptop gamer|asus|tuf gaming f15|core i5 rtx 3050|3699.90|3
+TEC-059|tablet|samsung|galaxy tab a9|64gb wifi gris|599.90|6
+TEC-060|soporte para monitor|north bayou|f80|brazo ajustable negro|119.90|7
