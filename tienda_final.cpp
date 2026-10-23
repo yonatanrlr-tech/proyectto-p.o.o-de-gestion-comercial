@@ -1,13 +1,14 @@
+//Nota: ING EL PRESENTE TRABAJO FUE DE MUCHO ESFUERZO Y TOKENS, ASI Q AGRADECERIAMOS Q NOS PASE CON BUENA NOTA :-) Att: Winnie , Polar y Tano 
 // Librerias y configuracion
 #include <algorithm>
-#include <ctime>
+#include <ctime> //fecha 
 #include <direct.h>
-#include <fstream>
-#include <iomanip>
-#include <iostream>
-#include <sstream>
-#include <string>
-#include <vector>
+#include <fstream> //leer y escribir archivos 
+#include <iomanip> //dar formato a los decimales 
+#include <iostream> //entrada y salida
+#include <sstream> //cortar texto 
+#include <string> //texto 
+#include <vector> //listas
 
 #ifdef _WIN32
 #ifndef WIN32_LEAN_AND_MEAN
@@ -16,12 +17,12 @@
 #ifndef NOMINMAX
 #define NOMINMAX
 #endif
-#include <windows.h>
+#include <windows.h> //colores en la consola
 #endif
 
 using namespace std;
 
-// Habilitar secuencias de escape ANSI en la terminal
+//Habilitar secuencias de escape ANSI en la terminal
 void activarTerminal() {
 #ifdef _WIN32
   HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -83,14 +84,14 @@ string obtenerFechaActual() {
   return "Fecha no disponible";
 }
 
-// Interfaz IImprimible
+//Interfaz Imprimible
 class IImprimible {
 public:
   virtual void imprimirInfo() const = 0;
   virtual ~IImprimible() = default;
 };
 
-// Clase abstracta Usuario
+//Clase abstracta Usuario
 class Usuario : public IImprimible {
 protected:
   string id_usuario;
@@ -99,7 +100,7 @@ protected:
   string contrasena;
 
 public:
-  // Constructores y destructor
+  //constructores y destructor
   Usuario() {
     id_usuario = "U000";
     nombre = "Sin nombre";
@@ -116,7 +117,7 @@ public:
 
   virtual ~Usuario() = default;
 
-  // Getters y setters
+  //Getters y setters
   string getIdUsuario() const { return id_usuario; }
   void setIdUsuario(const string &id) { id_usuario = id; }
 
@@ -134,14 +135,14 @@ public:
   virtual void imprimirInfo() const override = 0;
 };
 
-// Clase Cliente (hereda de Usuario)
+//Clase cliente (hereda de Usuario)
 class Cliente : public Usuario {
 private:
   string telefono;
   string direccion;
 
 public:
-  // Constructores
+  //Constructores
   Cliente() : Usuario() {
     telefono = "000000000";
     direccion = "Sin direccion";
@@ -161,7 +162,7 @@ public:
   string getDireccion() const { return direccion; }
   void setDireccion(const string &dir) { direccion = dir; }
 
-  // Metodos polimorficos
+  //Metodos polimorficos
   string getRol() const override { return "Cliente"; }
 
   void imprimirInfo() const override {
@@ -174,7 +175,7 @@ public:
   }
 };
 
-// Clase Administrador (hereda de Usuario)
+//clase Administrador (hereda de Usuario)
 class Administrador : public Usuario {
 private:
   string cargo;
@@ -193,11 +194,11 @@ public:
     cargo = car;
   }
 
-  // Getters y setters propios
+  //getters y setters propios
   string getCargo() const { return cargo; }
   void setCargo(const string &car) { cargo = car; }
 
-  // Metodos polimorficos
+  //Metodos polimorficos
   string getRol() const override { return "Administrador"; }
 
   void imprimirInfo() const override {
@@ -208,8 +209,7 @@ public:
     cout << "  Cargo:       \033[97m" << cargo << "\033[0m" << endl;
   }
 };
-
-// Clase Autenticador
+//Clase Autenticador
 class Autenticador {
 public:
   static bool validar(const Usuario *u, const string &usuarioOEmail,
@@ -234,7 +234,7 @@ private:
   int stock;
 
 public:
-  // Constructores
+  //Constructores
   Producto() {
     codigo = "P000";
     nombre = "Sin nombre";
@@ -244,7 +244,6 @@ public:
     precio = 0.0;
     stock = 0;
   }
-
   Producto(string cod, string nom, string mar, string mod, string var,
            double pre, int stk) {
     codigo = cod;
@@ -255,8 +254,7 @@ public:
     setPrecio(pre);
     setStock(stk);
   }
-
-  // Getters y setters con validacion
+  //Getters y setters con validacion
   string getCodigo() const { return codigo; }
   void setCodigo(const string &cod) { codigo = cod; }
 
@@ -288,7 +286,7 @@ public:
   }
 };
 
-// Clase abstracta ComprobantePago
+//Clase abstracta ComprobantePago
 class ComprobantePago : public IImprimible {
 protected:
   string numero_comprobante;
@@ -314,7 +312,7 @@ public:
     subtotal = sub;
     total = tot;
   }
-
+ //INGE si lee esto apruebenos p necesitamos nota :-(
   virtual ~ComprobantePago() = default;
 
   // Getters y setters
@@ -333,7 +331,7 @@ public:
   double getTotal() const { return total; }
   void setTotal(double tot) { total = tot; }
 
-  // Metodos virtuales puros
+  //Metodos virtuales puros
   virtual string getTipo() const = 0;
   virtual void imprimirInfo() const override = 0;
 };
@@ -356,7 +354,7 @@ public:
   string getDniCliente() const { return dni_cliente; }
   void setDniCliente(const string &dni) { dni_cliente = dni; }
 
-  // Metodos polimorficos
+  //Metodos polimorficos
   string getTipo() const override { return "Boleta de Venta"; }
 
   void imprimirInfo() const override {
@@ -397,7 +395,7 @@ public:
     igv = tot - sub;
   }
 
-  // Getters y setters
+  //getters y setters
   string getRucCliente() const { return ruc_cliente; }
   void setRucCliente(const string &ruc) { ruc_cliente = ruc; }
 
@@ -426,7 +424,7 @@ public:
   }
 };
 
-// Clase Venta
+//clase Venta
 class Venta {
 private:
   string codigo_venta;
@@ -439,7 +437,7 @@ private:
   string metodo_pago;
 
 public:
-  // Constructores
+  //Constructores
   Venta() {
     codigo_venta = "V-000";
     fecha = "01/01/2026";
@@ -463,7 +461,7 @@ public:
     metodo_pago = mp;
   }
 
-  // Getters y setters
+  //Getters y setters
   string getCodigoVenta() const { return codigo_venta; }
   void setCodigoVenta(const string &c) { codigo_venta = c; }
 
@@ -503,7 +501,7 @@ public:
   }
 };
 
-// Clase Tienda
+//clase tienda
 class Tienda : public IImprimible {
 private:
   string nombre;
@@ -529,7 +527,7 @@ public:
     telefono = tel;
   }
 
-  // Getters y setters
+  //Getters y setters
   string getNombre() const { return nombre; }
   void setNombre(const string &nom) { nombre = nom; }
 
@@ -578,7 +576,7 @@ public:
     }
   }
 
-  // Metodos polimorficos
+  //Metodos polimorficos
   void imprimirInfo() const override {
     cout << "\n\033[96m============================================================\033[0m" << endl;
     cout << "  \033[97;1mDATOS OFICIALES DE LA TIENDA\033[0m" << endl;
@@ -669,7 +667,7 @@ bool cargarConfig(string &nom, string &dir, string &ruc, string &tel,
   return false;
 }
 
-// Persistencia de productos
+//persistencia de productos
 void guardarProductos(const Tienda &tienda) {
   asegurarDirectorioDatos();
   ofstream f(DIR_DATOS + "productos.txt");
@@ -709,7 +707,7 @@ bool cargarProductos(Tienda &tienda) {
   return true;
 }
 
-// Persistencia de clientes
+//Persistencia de clientes
 void guardarClientes(const vector<Cliente> &clientes) {
   asegurarDirectorioDatos();
   ofstream f(DIR_DATOS + "clientes.txt");
@@ -747,7 +745,7 @@ bool cargarClientes(vector<Cliente> &clientes) {
   return true;
 }
 
-// Persistencia de ventas y comprobantes
+//persistencia de ventas y comprobantes
 void registrarVentaArchivo(const Venta &v) {
   asegurarDirectorioDatos();
   ofstream f(DIR_DATOS + "ventas.txt", ios::app);
@@ -803,7 +801,7 @@ bool cargarComprobantes(vector<ComprobantePago *> &comprobantes) {
   return true;
 }
 
-// Prototipos de funciones
+//prototipos de funciones
 void portalCliente(Tienda &tienda, Cliente &clienteActual,
                    vector<Venta> &historialVentas,
                    vector<ComprobantePago *> &historialComprobantes,
@@ -831,7 +829,7 @@ void loginDuenio(Tienda &tienda, string &adminUser, string &adminPass,
                  vector<ComprobantePago *> &historialComprobantes,
                  int contadorVentas);
 
-// Modulo del cliente
+//Modulo de cliente
 void portalCliente(Tienda &tienda, Cliente &clienteActual,
                    vector<Venta> &historialVentas,
                    vector<ComprobantePago *> &historialComprobantes,
@@ -909,7 +907,7 @@ void portalCliente(Tienda &tienda, Cliente &clienteActual,
       double subtotal = prod->getPrecio() * cantidad;
       cout << "\n  Subtotal de la compra: \033[92;1mS/. " << fixed << setprecision(2) << subtotal << "\033[0m" << endl;
 
-      // Metodo de pago
+      //Metodo de pago
       cout << "\n  Seleccione metodo de pago:" << endl;
       cout << "  \033[93m[1]\033[0m Efectivo" << endl;
       cout << "  \033[93m[2]\033[0m \033[95;1mYape\033[0m" << endl;
@@ -918,7 +916,7 @@ void portalCliente(Tienda &tienda, Cliente &clienteActual,
       cin >> opPago;
       string metodoPagoStr = (opPago == 2) ? "Yape" : "Efectivo";
 
-      // Tipo de comprobante
+      //Tipo de comprobante
       cout << "\n  Tipo de comprobante requerido:" << endl;
       cout << "  \033[93m[1]\033[0m Boleta de Venta (Con DNI)" << endl;
       cout << "  \033[93m[2]\033[0m Factura Electronica (Con RUC y Razon Social)" << endl;
@@ -963,7 +961,7 @@ void portalCliente(Tienda &tienda, Cliente &clienteActual,
                        dniCliente, subtotal, subtotal);
       }
 
-      // Actualizar stock
+      //Actualizar stock
       prod->setStock(prod->getStock() - cantidad);
 
       // Crear objeto venta
@@ -973,7 +971,7 @@ void portalCliente(Tienda &tienda, Cliente &clienteActual,
       historialVentas.push_back(nuevaVenta);
       historialComprobantes.push_back(nuevoComprobante);
 
-      // Guardar en archivos
+      //guardar en archivos
       guardarProductos(tienda);
       registrarVentaArchivo(nuevaVenta);
       registrarComprobanteArchivo(nuevoComprobante);
@@ -987,7 +985,7 @@ void portalCliente(Tienda &tienda, Cliente &clienteActual,
       nuevaVenta.imprimirVenta();
       cout << endl;
 
-      // Imprimir comprobante
+      //imprimir comprobante
       nuevoComprobante->imprimirInfo();
 
       pausar();
@@ -1037,7 +1035,7 @@ void portalCliente(Tienda &tienda, Cliente &clienteActual,
   }
 }
 
-// Modulo del administrador: inventario
+//Modulo del administrador-inventario
 void adminInventario(Tienda &tienda) {
   int opcion = 0;
   while (opcion != 4) {
@@ -1152,7 +1150,7 @@ void adminInventario(Tienda &tienda) {
   }
 }
 
-// Modulo del administrador: clientes
+//Modulo de administrador-clientes
 void adminClientes(const vector<Cliente> &listaClientes) {
   limpiarPantalla();
   imprimirTitulo("CLIENTES REGISTRADOS EN LA TIENDA");
@@ -1171,7 +1169,7 @@ void adminClientes(const vector<Cliente> &listaClientes) {
   pausar();
 }
 
-// Modulo del administrador: reportes
+//Modulo de administrador-reportes
 void adminReporteVentas(
     const vector<Venta> &historialVentas,
     const vector<ComprobantePago *> &historialComprobantes) {
@@ -1204,8 +1202,8 @@ void adminReporteVentas(
 
   pausar();
 }
-
-// Modulo del administrador: datos de la tienda
+//INGE si lee esto apruebenos p 
+//Modulo del administrador-datos de la tienda
 void adminDatosTienda(Tienda &tienda, string &adminUser, string &adminPass,
                       int contadorVentas) {
   limpiarPantalla();
@@ -1277,7 +1275,7 @@ void adminDatosTienda(Tienda &tienda, string &adminUser, string &adminPass,
   }
 }
 
-// Panel principal del administrador
+//Panel principal del administrador
 void panelDuenio(Tienda &tienda, string &adminUser, string &adminPass,
                  vector<Cliente> &listaClientes, vector<Venta> &historialVentas,
                  vector<ComprobantePago *> &historialComprobantes,
@@ -1320,7 +1318,7 @@ void panelDuenio(Tienda &tienda, string &adminUser, string &adminPass,
   }
 }
 
-// Login y registro de clientes
+//Login y registro de clientes
 void loginCliente(Tienda &tienda, vector<Cliente> &listaClientes,
                   vector<Venta> &historialVentas,
                   vector<ComprobantePago *> &historialComprobantes,
@@ -1416,7 +1414,7 @@ void loginCliente(Tienda &tienda, vector<Cliente> &listaClientes,
   }
 }
 
-// Login del administrador
+//Login del administrador
 void loginDuenio(Tienda &tienda, string &adminUser, string &adminPass,
                  vector<Cliente> &listaClientes, vector<Venta> &historialVentas,
                  vector<ComprobantePago *> &historialComprobantes,
@@ -1444,12 +1442,12 @@ void loginDuenio(Tienda &tienda, string &adminUser, string &adminPass,
   }
 }
 
-// Funcion principal main
+//Incio de la funcion principal main
 int main() {
-  // Activar soporte de colores ANSI en la terminal
+  //Activar soporte de colores ANSI en la terminal
   activarTerminal();
 
-  // Variables principales
+  //Variables principales
   Tienda miTienda;
   string adminUser = "admin";
   string adminPass = "admin123";
@@ -1459,7 +1457,7 @@ int main() {
   vector<Venta> historialVentas;
   vector<ComprobantePago *> historialComprobantes;
 
-  // Cargar configuracion o iniciar datos
+  //Cargar configuracion o iniciar datos
   asegurarDirectorioDatos();
 
   string nomT, dirT, rucT, telT;
@@ -1472,7 +1470,7 @@ int main() {
     cargarClientes(listaClientes);
     cargarComprobantes(historialComprobantes);
   } else {
-    // Datos iniciales si no existe configuracion
+    //Datos iniciales si no existe configuracion
     limpiarPantalla();
     imprimirTitulo("CONFIGURACION INICIAL - REGISTRO DE SU TIENDA");
     cout << "  No se detecto configuracion previa en la carpeta datos/." << endl;
@@ -1512,7 +1510,7 @@ int main() {
 
     miTienda = Tienda(nomT, dirT, rucT, telT);
 
-    // Guardar configuracion inicial
+    //Guardar configuracion inicial
     guardarConfig(nomT, dirT, rucT, telT, adminUser, adminPass, contadorVentas);
     guardarProductos(miTienda);
     guardarClientes(listaClientes);
@@ -1521,7 +1519,7 @@ int main() {
     pausar();
   }
 
-  // Menu principal
+  //Menu principal
   int rol = 0;
   while (rol != 3) {
     limpiarPantalla();
@@ -1551,7 +1549,7 @@ int main() {
                   historialVentas, historialComprobantes, contadorVentas);
       break;
     case 3:
-      // Guardar datos al salir
+      //Guardar datos al salir
       guardarConfig(miTienda.getNombre(), miTienda.getDireccion(),
                     miTienda.getRuc(), miTienda.getTelefono(), adminUser,
                     adminPass, contadorVentas);
@@ -1565,7 +1563,7 @@ int main() {
     }
   }
 
-  // Liberar memoria dinamica
+  //Liberar memoria dinamica
   for (size_t i = 0; i < historialComprobantes.size(); i++) {
     delete historialComprobantes[i];
   }
