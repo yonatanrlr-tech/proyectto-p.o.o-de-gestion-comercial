@@ -23,7 +23,7 @@ CLI-121|joe|joemendoza121@gmail.com|900000121|jr bolivar 121|joe2026
 CLI-122|franklin|franklinquillimamami122@gmail.com|900000122|av costanera 122|franklin2026
 CLI-123|johao|johaoquispe123@gmail.com|900000123|jr puno 123|johao2026
 CLI-124|deyvit|deyvitrafael124@gmail.com|900000124|av san roman 124|deyvit2026
-CLI-125|jose|joseromero125@gmail.com|900000125|jr puno 125|jose2026
+CLI-125|yonatan|yonatanromero125@gmail.com|900000125|jr puno 125|yonatan2026
 CLI-126|blaise|blaisesucari126@gmail.com|900000126|av libertad 126|blaise2026
 CLI-127|jean|jeansucari127@gmail.com|900000127|jr los pinos 127|jean2026
 CLI-128|jafet|jafettintaya128@gmail.com|900000128|av primavera 128|jafet2026
